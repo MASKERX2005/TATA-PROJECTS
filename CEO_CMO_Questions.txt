@@ -1,0 +1,44 @@
+TATA DATA VISUALISATION INTERNSHIP - TASK 1: FRAMING THE BUSINESS SCENARIO
+Questions to prepare for the CEO and CMO meeting
+
+Dataset reviewed: Online Retail (541,909 transaction lines, 25,900 invoices, 4,372 identified customers, 4,070 products, 38 countries, 1 Dec 2010 - 9 Dec 2011). Fields: InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country.
+
+--------------------------------------------------------------
+QUESTIONS FOR THE CEO (operations, growth, financial health)
+--------------------------------------------------------------
+
+1. How has revenue and order volume trended month by month, and which months and days/hours drive the peaks?
+   Why it matters: Shows the seasonality and growth trajectory behind next year's targets, and shows when to plan stock, staffing and fulfilment capacity. (Revenue = Quantity x UnitPrice, tracked alongside number of invoices and average order value.)
+
+2. Which products and product categories generate the most revenue, and how concentrated is revenue? Do a small number of items carry the business?
+   Why it matters: Tells leadership what is working and should be protected or scaled, and which long-tail items tie up inventory without paying back. Quantity sold should be compared with revenue to separate high-volume low-price items from high-value ones.
+
+3. Which countries or regions contribute the most revenue, and which are growing fastest outside the home market?
+   Why it matters: The business appears heavily dependent on the United Kingdom. This answers the expansion question: where to expand, and how risky the dependence on one market is. Compare total revenue, average order value and growth rate per country.
+
+4. How much revenue is lost to returns and cancellations (negative quantities / credit notes), and which products or countries are most affected?
+   Why it matters: Returns are a hidden operational cost that erodes net revenue and signals product quality, description or fulfilment problems. Net revenue, not gross, should be the basis for planning and expansion decisions.
+
+--------------------------------------------------------------
+QUESTIONS FOR THE CMO (customers, retention, marketing effectiveness)
+--------------------------------------------------------------
+
+1. Who are our most valuable customers, and how can we segment them (for example using RFM: Recency, Frequency, Monetary value)?
+   Why it matters: Lets marketing target high-value customers, win back lapsing ones and tailor campaigns by segment. It also shows what share of revenue comes from the top 10-20% of customers.
+
+2. What is our customer retention picture: how many customers are new versus repeat, and how does repeat purchasing change over time (cohort analysis)?
+   Why it matters: Retaining a customer is cheaper than acquiring one. Cohort retention and repeat purchase rate show whether marketing is building loyalty or only buying one-off sales, and what customer lifetime value looks like.
+
+3. Which customer groups (by country, as the available demographic proxy) buy the most, spend the most per order and buy the broadest range of products?
+   Why it matters: Supports geographic targeting and localised campaigns. Average order value, items per basket and purchase frequency by country show where marketing spend is likely to earn the best return.
+
+4. Which products are bought together and what time patterns (month, weekday, hour) are best for promotions?
+   Why it matters: Market basket analysis supports bundles, cross-sell and upsell. Timing analysis shows when to send campaigns so they meet peak buying behaviour, such as the pre-Christmas surge, and how to lift average order value.
+
+--------------------------------------------------------------
+DATA NOTES TO RAISE WITH LEADERSHIP
+--------------------------------------------------------------
+- About 25% of rows (135,080) have no CustomerID, so customer-level analysis (retention, RFM) covers only identified customers. Suggest improving customer ID capture at checkout.
+- Demographic data is limited to Country; age, gender or channel data are not available. Recommend collecting them, plus marketing channel/source, to measure campaign ROI.
+- About 10,600 lines have negative quantities (returns/cancellations) and some have zero or negative prices; these need cleaning or separate treatment.
+- The data covers only about 13 months, so year-on-year growth cannot be measured. December 2011 is a partial month (to 9 Dec).
